@@ -22,7 +22,7 @@ const Product : FC <IProductTypeProps> = ({id,title,description,price,discountPe
 <h2>{id}. {title}. {description}. {price}. {discountPercentage}. {rating}. {stock}. {brand}. {category}. {thumbnail}</h2>
         <div>
             {
-                images.map((image,index)=><img src={image} alt={title}/>)
+                images.map((image,index)=><img key={id} src={image} alt={title}/>)
             }
         </div>
 
